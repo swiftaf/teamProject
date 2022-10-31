@@ -1,35 +1,80 @@
-# Big Heading
+Original App Design Project - README Template
+===
 
-## Smaller Heading
+# APP_NAME_HERE
 
-### Smallest Heading
+## Table of Contents
+1. [Overview](#Overview)
+1. [Product Spec](#Product-Spec)
+1. [Wireframes](#Wireframes)
+2. [Schema](#Schema)
 
-Regular  text
+## Overview
+### Description
+[Description of your app]
 
-**bold text**
+### App Evaluation
+[Evaluation of your app across the following attributes]
+- **Category:**
+- **Mobile:**
+- **Story:**
+- **Market:**
+- **Habit:**
+- **Scope:**
 
-*italicized text*
+## Product Spec
 
-> blockquote
-1. First item
-2. Second item
-3. Third item
-- First item
-- Second item
-- Third item
-`code`
----
+### 1. User Stories (Required and Optional)
 
-[title](https://www.example.com)
+**Required Must-have Stories**
 
-![alt text](image.jpg)
+* [fill in your required user stories here]
+* ...
 
-~~The world is flat.~~
+**Optional Nice-to-have Stories**
 
-Task List	
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+* [fill in your required user stories here]
+* ...
 
-Emoji
-:joy:
+### 2. Screen Archetypes
+
+* [list first screen here]
+   * [list associated required story here]
+   * ...
+* [list second screen here]
+   * [list associated required story here]
+   * ...
+
+### 3. Navigation
+
+**Tab Navigation** (Tab to Screen)
+
+* [fill out your first tab]
+* [fill out your second tab]
+* [fill out your third tab]
+
+**Flow Navigation** (Screen to Screen)
+
+* [list first screen here]
+   * [list screen navigation here]
+   * ...
+* [list second screen here]
+   * [list screen navigation here]
+   * ...
+
+## Wireframes
+[Add picture of your hand sketched wireframes in this section]
+<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+### [BONUS] Digital Wireframes & Mockups
+
+### [BONUS] Interactive Prototype
+
+## Schema 
+[This section will be completed in Unit 9]
+### Models
+[Add table of models]
+### Networking
+- [Add list of network requests by screen ]
+- [Create basic snippets for each Parse network request]
+- [OPTIONAL: List endpoints if using existing API such as Yelp]
