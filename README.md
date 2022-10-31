@@ -11,16 +11,17 @@ Group #1 SWIFTAF - README
 
 ## Overview
 ### Description
-[Description of your app]
+iOS app that will serve to offer users multiple exercises intended to challenge finger dexterityand mental agility. There will be two games that a user
+can select to play, a physical and mental game.  
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category: Gaming**
+- **Mobile: This app would primarily be developed for mobile devices.**
+- **Story: The target audience is stroke survivors with physical and cognitive deficits.**
+- **Market: Any individual can use this app but targeted to stroke survivors**
+- **Habit: This app can be used whenever the user would like to use and play with**
+- **Scope: There will be different levels that users can play with and depending on the performance the levels get challenging.**
 
 ## Product Spec
 
@@ -28,39 +29,49 @@ Group #1 SWIFTAF - README
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* See the application logo 
+* Be able to create an account 
+* Be able to sign in 
+* Be able to log out 
+* Have a navigation bar to see which scenes to click on 
+* See a home page screen that consists of the features 
+* 2048 game: Practice motion skills 
+* Wordle game: Practice cognitive skills 
+* Be able to see victory when user wins game 
+* Be able to see loss when user loses game 
+* Scoreboard tracker 
+
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* To do list to keep track of daily tasks
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login
+* Create an account- user can sign in or sign up to 
+* Profile screen
+* 2048 game screen
+* World game screen
+* History/stats screen
+  
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Profile
+* History, stats
+* Home page return
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Launch Screen
+* Home Page
+* Navigation bar
+* Select games
+  -2048
+  -Wordle
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
