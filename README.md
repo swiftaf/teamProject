@@ -1,7 +1,7 @@
-Original App Design Project - README Template
+Group #1 SWIFTAF - README 
 ===
 
-# APP_NAME_HERE
+# Plasticity
 
 ## Table of Contents
 1. [Overview](#Overview)
