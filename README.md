@@ -29,52 +29,52 @@ can select to play, a physical and mental game.
 
 **Required Must-have Stories**
 
-* See the application logo 
-* Be able to create an account 
-* Be able to sign in 
-* Be able to log out 
-* Have a navigation bar to see which scenes to click on 
-* See a home page screen that consists of the features 
-* 2048 game: Practice motion skills 
-* Wordle game: Practice cognitive skills 
-* Be able to see victory when user wins game 
-* Be able to see loss when user loses game 
-* Scoreboard tracker 
+- See the application logo 
+- Be able to create an account 
+- Be able to sign in 
+- Be able to log out 
+- Have a navigation bar to see which scenes to click on 
+- See a home page screen that consists of the features 
+- 2048 game: Practice motion skills 
+- Wordle game: Practice cognitive skills 
+- Be able to see victory when user wins game 
+- Be able to see loss when user loses game 
+- Scoreboard tracker 
 
 
 **Optional Nice-to-have Stories**
 
-* To do list to keep track of daily tasks
+- To do list to keep track of daily tasks
 
 ### 2. Screen Archetypes
 
-* Launch Screen
-* Registration
-* Login
-* Home Screen
-* Wordley Game Screen
-* SlideIt Game Screen
-* Trophy Screen
-* History/Stats Screen
-* Profile Screen
-  
+- Launch Screen
+- Registration
+- Login
+- Home Screen
+- Wordley Game Screen
+- SlideIt Game Screen
+- Trophy Screen
+- History/Stats Screen
+- Profile Screen
+
 
 ### 3. Navigation
 
-**Tab Navigation** (Tab to Screen)
+**Tab Navigation*- (Tab to Screen)
 
-* Profile
-* History, stats
-* Home screen return
+- Profile
+- History, stats
+- Home screen return
 
-**Flow Navigation** (Screen to Screen)
+**Flow Navigation*- (Screen to Screen)
 
-* Launch Screen
-* Home Screen
-* Navigation bar
-* Select games
-- SlideIt
-- Wordley
+- Launch Screen
+- Home Screen
+- Navigation bar
+- Select games
+1. SlideIt
+2. Wordley
 
 ## Wireframes
 
