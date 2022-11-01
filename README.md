@@ -11,7 +11,7 @@ Group #1 SWIFTAF - README
 
 ## Overview
 ### Description
-iOS app that will serve to offer users multiple exercises intended to challenge finger dexterityand mental agility. There will be two games that a user
+iOS app that will serve to offer users multiple exercises intended to challenge finger dexterity and mental agility. There will be two games that a user
 can select to play, a physical and mental game.  
 
 ### App Evaluation
