@@ -75,7 +75,15 @@ can select to play, a physical and mental game.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="images/login.png">
+<img src="images/logo.png" width="200">
+<img src="images/signup.png" width="200">
+<img src="images/login.png" width="200">
+<img src="images/gameScreen.png" width="200">
+<img src="images/wordley.png" width="200">
+<img src="images/slideIt.png" width="200">
+<img src="images/trophy.png" width="200">
+<img src="images/history.png" width="200">
+<img src="images/profile.png" width="200">
 
 ### [BONUS] Digital Wireframes & Mockups
 
