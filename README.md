@@ -75,7 +75,7 @@ can select to play, a physical and mental game.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="images/login.png">
 
 ### [BONUS] Digital Wireframes & Mockups
 
