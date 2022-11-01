@@ -73,8 +73,8 @@ can select to play, a physical and mental game.
 * Home Screen
 * Navigation bar
 * Select games
-- [ ] SlideIt
-- [ ] Wordley
+- SlideIt
+- Wordley
 
 ## Wireframes
 
