@@ -48,12 +48,15 @@ can select to play, a physical and mental game.
 
 ### 2. Screen Archetypes
 
+* Launch Screen
+* Registration
 * Login
-* Create an account- user can sign in or sign up to 
-* Profile screen
-* 2048 game screen
-* World game screen
-* History/stats screen
+* Home Screen
+* Wordley Game Screen
+* SlideIt Game Screen
+* Trophy Screen
+* History/Stats Screen
+* Profile Screen
   
 
 ### 3. Navigation
@@ -62,16 +65,16 @@ can select to play, a physical and mental game.
 
 * Profile
 * History, stats
-* Home page return
+* Home screen return
 
 **Flow Navigation** (Screen to Screen)
 
 * Launch Screen
-* Home Page
+* Home Screen
 * Navigation bar
 * Select games
-  -2048
-  -Wordle
+  -SlideIt
+  -Wordley
 
 ## Wireframes
 
