@@ -74,7 +74,7 @@ can select to play, a physical and mental game.
   -Wordle
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
+
 <img src="images/logo.png" width="200">
 <img src="images/signup.png" width="200">
 <img src="images/login.png" width="200">
@@ -84,10 +84,6 @@ can select to play, a physical and mental game.
 <img src="images/trophy.png" width="200">
 <img src="images/history.png" width="200">
 <img src="images/profile.png" width="200">
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 [This section will be completed in Unit 9]
