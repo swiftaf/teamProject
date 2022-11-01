@@ -72,9 +72,8 @@ can select to play, a physical and mental game.
 - Launch Screen
 - Home Screen
 - Navigation bar
-- Select games
-1. SlideIt
-2. Wordley
+- Select games (Wordley/SlideIt)
+
 
 ## Wireframes
 
