@@ -78,15 +78,15 @@ can select to play, a physical and mental game.
 
 ## Wireframes
 
-<img src="images/logo.png" width="200"> 
-<img src="images/signup.png" width="200"> 
-<img src="images/login.png" width="200">
-<img src="images/gameScreen.png" width="200">
-<img src="images/wordley.png" width="200">
-<img src="images/slideIt.png" width="200">
-<img src="images/trophy.png" width="200">
-<img src="images/history.png" width="200">
-<img src="images/profile.png" width="200">
+<img src="images/logo.png" width="200"> <img 
+src="images/signup.png" width="200"> <img 
+src="images/login.png" width="200"> <img 
+src="images/gameScreen.png" width="200"> <img 
+src="images/wordley.png" width="200"> <img 
+src="images/slideIt.png" width="200"> <img 
+src="images/trophy.png" width="200"> <img 
+src="images/history.png" width="200"> <img 
+src="images/profile.png" width="200">
 
 ## Schema 
 [This section will be completed in Unit 9]
