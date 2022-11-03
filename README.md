@@ -91,14 +91,14 @@ src="images/profile.png" width="200">
 ### Models
 
 
-| Property | Type | Description | 
-| ------------- | ------------- |
-| username  | String  | identification for user to login with |
-| password  | String  | secret data for user to access login  |
-| profile  | String  | user's info  |
-| score  | Number | number of points user recieves |
-| best  | Number  | number of high score user recieves |
-| reset  | String | used to restart the game |
+| Property | Type    | Description                           | 
+| ---------|-------  | ------------------------------------- |
+| username | String  | identification for user to login with |
+| password | String  | secret data for user to access login  |
+| profile  | String  | user's info                           |
+| score    | Number  | number of points user recieves        |
+| best     | Number  | number of high score user recieves    |
+| reset    | String  | used to restart the game              |
 
 
 
