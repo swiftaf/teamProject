@@ -35,8 +35,8 @@ can select to play, a physical and mental game.
 - Be able to log out 
 - Have a navigation bar to see which scenes to click on 
 - See a home page screen that consists of the features 
-- 2048 game: Practice motion skills 
-- Wordle game: Practice cognitive skills 
+- SlideIt game: Practice motion skills 
+- Wordley game: Practice cognitive skills 
 - Be able to see victory when user wins game 
 - Be able to see loss when user loses game 
 - Scoreboard tracker 
