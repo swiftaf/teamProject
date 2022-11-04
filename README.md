@@ -103,9 +103,10 @@ src="images/profile.png" width="200">
 
 
 ### Networking
-- Signup Screen
-  - (Create/POST)
-        ``` swift
+
+      - Signup Screen
+        - (Create/POST) Signup with Username, Password, and Email
+        ```swift
         let user = PFUser()
         user.username = usernameField.text
         user.password = passwordField.text
