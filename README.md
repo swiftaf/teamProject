@@ -125,7 +125,8 @@ src="images/profile.png" width="200">
   ```swift
   let username = usernameField.text!
   let password = passwordField.text!
-  PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+  PFUser.logInWithUsername(inBackground: username, 
+    password: password) { (user, error) in
       if user != nil {
           self.performSegue(withIdentifier: "loginSegue", sender: nil)
       } else {
@@ -151,12 +152,12 @@ src="images/profile.png" width="200">
       var query = PFQuery(className:"User")
 
       query.getObjectInBackgroundWithId("<PARSE_OBJECT_ID>") {
-      (parseObject: PFObject?, error: NSError?) -> Void in
-      if error == nil && parseObject != nil {
-          print(parseObject)
-      } else {
-          print(error)
+        (parseObject: PFObject?, error: NSError?) -> Void in
+            if error == nil && parseObject != nil {
+                print(parseObject)
+            } else {
+                print(error)
+            }
       }
-      }
-      ```
+    ```
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
