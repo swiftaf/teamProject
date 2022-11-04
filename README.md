@@ -106,58 +106,58 @@ src="images/profile.png" width="200">
 
 - Signup Screen
   - (Create/POST) Signup with Username, Password, and Email
-  ```swift
-  let user = PFUser()
-  user.username = usernameField.text
-  user.password = passwordField.text
-  user.email = emailField.text
-  user.signUpInBackground { (success, error) in
-      if success {
-          self.performSegue(withIdentifier: "loginSegue", sender: nil)
-      } else {
-          print("Error: \(error?.localizedDescription)")
-      }
-  }
+```swift
+let user = PFUser()
+user.username = usernameField.text
+user.password = passwordField.text
+user.email = emailField.text
+user.signUpInBackground { (success, error) in
+    if success {
+        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+    } else {
+        print("Error: \(error?.localizedDescription)")
+    }
+}
   ```
 
 - Login Screen
   - (Create/POST) Login with Username & Password
-  ```swift
-  let username = usernameField.text!
-  let password = passwordField.text!
-  PFUser.logInWithUsername(inBackground: username, 
+```swift
+let username = usernameField.text!
+let password = passwordField.text!
+PFUser.logInWithUsername(inBackground: username, 
     password: password) { (user, error) in
-      if user != nil {
-          self.performSegue(withIdentifier: "loginSegue", sender: nil)
-      } else {
-          print("Error: \(error?.localizedDescription)")
-      }
-  }
+    if user != nil {
+        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+    } else {
+        print("Error: \(error?.localizedDescription)")
+    }
+}
   ```
 
 - Main Screen
   - (Read/GET) Get Current Username
-  ```swift
-  let currentUser = PFUser.currentUser()
-  if currentUser != nil {
-  // Do stuff with the user
-  } else {
-  // Show the signup or login screen
-  }
-  ```
+```swift
+let currentUser = PFUser.currentUser()
+if currentUser != nil {
+// Do stuff with the user
+} else {
+// Show the signup or login screen
+}
+```
 
 - Profile screen
   - (Read/GET) Get Current User Pnformation
-      ```swift
-      var query = PFQuery(className:"User")
+```swift
+var query = PFQuery(className:"User")
 
-      query.getObjectInBackgroundWithId("<PARSE_OBJECT_ID>") {
-        (parseObject: PFObject?, error: NSError?) -> Void in
-            if error == nil && parseObject != nil {
-                print(parseObject)
-            } else {
-                print(error)
-            }
-      }
-    ```
+query.getObjectInBackgroundWithId("<PARSE_OBJECT_ID>") {
+(parseObject: PFObject?, error: NSError?) -> Void in
+    if error == nil && parseObject != nil {
+        print(parseObject)
+    } else {
+        print(error)
+    }
+}
+```
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
