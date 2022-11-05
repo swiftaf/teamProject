@@ -160,4 +160,3 @@ query.getObjectInBackgroundWithId("<PARSE_OBJECT_ID>") {
     }
 }
 ```
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
