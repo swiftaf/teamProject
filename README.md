@@ -147,7 +147,7 @@ if currentUser != nil {
 ```
 
 - Profile screen
-  - (Read/GET) Get Current User Pnformation
+  - (Read/GET) Get Current User Information
 ```swift
 var query = PFQuery(className:"User")
 
