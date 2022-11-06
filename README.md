@@ -30,9 +30,8 @@ can select to play, a physical and mental game.
 **Required Must-have Stories**
 
 - See the application logo 
-- Be able to create an account 
-- Be able to sign in 
-- Be able to log out 
+- Be able to sign into Game Center if not already signed in
+- Be able to log out of Game Center if desired
 - Have a navigation bar to see which scenes to click on 
 - See a home page screen that consists of the features 
 - SlideIt game: Practice motion skills 
@@ -49,14 +48,12 @@ can select to play, a physical and mental game.
 ### 2. Screen Archetypes
 
 - Launch Screen
-- Registration
-- Login
+- Game Center Login
 - Home Screen
 - Wordley Game Screen
 - SlideIt Game Screen
 - Trophy Screen
 - History/Stats Screen
-- Profile Screen
 
 
 ### 3. Navigation
@@ -78,14 +75,12 @@ can select to play, a physical and mental game.
 ## Wireframes
 
 <img src="images/logo.png" width="200"> <img 
-src="images/signup.png" width="200"> <img 
-src="images/login.png" width="200"> <img 
+src="images/gameCenter.png" width="200"> <img 
 src="images/gameScreen.png" width="200"> <img 
 src="images/wordley.png" width="200"> <img 
 src="images/slideIt.png" width="200"> <img 
 src="images/trophy.png" width="200"> <img 
-src="images/history.png" width="200"> <img 
-src="images/profile.png" width="200">
+src="images/history.png" width="200"> 
 
 ## Schema 
 ### Models
