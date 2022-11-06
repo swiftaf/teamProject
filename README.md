@@ -31,8 +31,6 @@ can select to play, a physical and mental game.
 
 - See the application logo 
 - Be able to sign into Game Center if not already signed in
-- Be able to log out of Game Center if desired
-- Have a navigation bar to see which scenes to click on 
 - See a home page screen that consists of the features 
 - SlideIt game: Practice motion skills 
 - Wordley game: Practice cognitive skills 
@@ -68,7 +66,6 @@ can select to play, a physical and mental game.
 
 - Launch Screen
 - Home Screen
-- Navigation bar
 - Select games (Wordley/SlideIt)
 
 
@@ -88,45 +85,44 @@ src="images/history.png" width="200">
 
 | Property | Type    | Description                           | 
 | ---------|-------  | ------------------------------------- |
-| username | String  | identification for user to login with |
-| password | String  | secret data for user to access login  |
-| profile  | String  | user's info                           |
 | score    | Number  | number of points user recieves        |
 | best     | Number  | number of high score user recieves    |
-| reset    | String  | used to restart the game              |
+| reset    | Boolean | used to restart the game              |
 
 
 
 ### Networking
 
-- Signup Screen
-  - (Create/POST) Signup with Username, Password, and Email
-```swift
-let user = PFUser()
-user.username = usernameField.text
-user.password = passwordField.text
-user.email = emailField.text
-user.signUpInBackground { (success, error) in
-    if success {
-        self.performSegue(withIdentifier: "loginSegue", sender: nil)
-    } else {
-        print("Error: \(error?.localizedDescription)")
-    }
-}
-  ```
-
 - Login Screen
-  - (Create/POST) Login with Username & Password
+  - (Create/POST) Login to Game Center
 ```swift
-let username = usernameField.text!
-let password = passwordField.text!
-PFUser.logInWithUsername(inBackground: username, 
-    password: password) { (user, error) in
-    if user != nil {
-        self.performSegue(withIdentifier: "loginSegue", sender: nil)
-    } else {
-        print("Error: \(error?.localizedDescription)")
+GKLocalPlayer.local.authenticateHandler = { viewController, error in
+    if let viewController = viewController {
+        // Present the view controller so the player can sign in.
+        return
     }
+    if error != nil {
+        // Player could not be authenticated.
+        // Disable Game Center in the game.
+        return        
+    }
+    
+    // Player was successfully authenticated.
+    // Check if there are any player restrictions before starting the game.
+            
+    if GKLocalPlayer.local.isUnderage {
+        // Hide explicit game content.
+    }
+
+    if GKLocalPlayer.local.isMultiplayerGamingRestricted {
+        // Disable multiplayer game features.
+    } 
+
+    if GKLocalPlayer.local.isPersonalizedCommunicationRestricted {
+        // Disable in game communication UI.
+    }
+    
+    // Perform any other configurations as needed (for example, access point).
 }
   ```
 
