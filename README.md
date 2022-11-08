@@ -121,7 +121,7 @@ if localPlayer != nil {
 // Show the signup or login screen
 }
 ```
-- SlideIt Game screen
+- Wordle Game screen
   - (Create/POST) If achievement made
 ```swift
 // initiate score instance in leaderboard
