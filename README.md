@@ -83,11 +83,12 @@ src="images/history.png" width="200">
 ### Models
 
 
-| Property | Type    | Description                           | 
-| ---------|-------  | ------------------------------------- |
-| score    | Number  | number of points user recieves        |
-| best     | Number  | number of high score user recieves    |
-| reset    | Boolean | used to restart the game              |
+| Property    | Type    | Description                           | 
+| ------------|---------|-------------------------------------- |
+| localPlayer | String  | User's AppleID username               |
+| score       | Int     | number of points user receives        |
+| best        | Int     | number of high score user recieves    |
+| reset       | Boolean | used to restart the game              |
 
 
 
@@ -106,48 +107,58 @@ GKLocalPlayer.local.authenticateHandler = { viewController, error in
         // Disable Game Center in the game.
         return        
     }
-    
-    // Player was successfully authenticated.
-    // Check if there are any player restrictions before starting the game.
-            
-    if GKLocalPlayer.local.isUnderage {
-        // Hide explicit game content.
-    }
-
-    if GKLocalPlayer.local.isMultiplayerGamingRestricted {
-        // Disable multiplayer game features.
-    } 
-
-    if GKLocalPlayer.local.isPersonalizedCommunicationRestricted {
-        // Disable in game communication UI.
-    }
-    
-    // Perform any other configurations as needed (for example, access point).
 }
   ```
 
 - Main Screen
   - (Read/GET) Get Current Username
 ```swift
-let currentUser = PFUser.currentUser()
-if currentUser != nil {
+let localPlayer = GKLocalPlayer()
+if localPlayer != nil {
 // Do stuff with the user
 } else {
 // Show the signup or login screen
+}
+```
+- SlideIt Game screen
+  - (Create/POST) If achievement made
+```swift
+GKScore *gScore = [[GKScore alloc]
+    initWithLeaderboardIdentifier:LEADERBOARD_ID];
+gScore.value = score;
+
+if(score >= achievement) {
+    GKAchievement *noviceAchievement =
+        [[GKAchievement alloc]
+        initWithIdentifier:ACHIEVEMENT_NOVICE_ID];
+
+    noviceAchievement.percentComplete = 100;
+    [achievements addObject:noviceAchievement];
+}
+```
+
+- SlideIt Game screen
+  - (Create/POST) If achievement made
+```swift
+GKScore *gScore = [[GKScore alloc]
+    initWithLeaderboardIdentifier:LEADERBOARD_ID];
+gScore.value = score;
+
+if(score >= achievement) {
+    GKAchievement *noviceAchievement =
+        [[GKAchievement alloc]
+        initWithIdentifier:ACHIEVEMENT_NOVICE_ID];
+
+    noviceAchievement.percentComplete = 100;
+    [achievements addObject:noviceAchievement];
 }
 ```
 
 - Profile screen
   - (Read/GET) Get Current User Information
 ```swift
-var query = PFQuery(className:"User")
-
-query.getObjectInBackgroundWithId("<PARSE_OBJECT_ID>") {
-(parseObject: PFObject?, error: NSError?) -> Void in
-    if error == nil && parseObject != nil {
-        print(parseObject)
-    } else {
-        print(error)
-    }
-}
+// Display the dashboard.
+let viewController = GKGameCenterViewController(state: .dashboard)
+viewController.gameCenterDelegate = self
+present(viewController, animated: true, completion: nil)
 ```
