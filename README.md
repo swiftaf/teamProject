@@ -82,14 +82,22 @@ src="images/history.png" width="200">
 ## Schema 
 ### Models
 
+#### POST
 
 | Property    | Type    | Description                             | 
 |-------------|---------|-----------------------------------------|
 | localPlayer | String  | User's AppleID username                 |
 | score       | Int     | Number of points user receives          |
+| reset       | Boolean | Used to restart the game                |
+
+#### GET
+
+| Property    | Type    | Description                             | 
+|-------------|---------|-----------------------------------------|
+| localPlayer | String  | User's AppleID username                 |
 | best        | Int     | Highest score returned from Game Center |
 | achievement | Int     | Achievement set in Game Center          |
-| reset       | Boolean | Used to restart the game                |
+
 
 
 
