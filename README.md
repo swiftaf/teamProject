@@ -83,12 +83,13 @@ src="images/history.png" width="200">
 ### Models
 
 
-| Property    | Type    | Description                           | 
-| ------------|---------|-------------------------------------- |
-| localPlayer | String  | User's AppleID username               |
-| score       | Int     | number of points user receives        |
-| best        | Int     | number of high score user recieves    |
-| reset       | Boolean | used to restart the game              |
+| Property    | Type    | Description                             | 
+|-------------|---------|-----------------------------------------|
+| localPlayer | String  | User's AppleID username                 |
+| score       | Int     | Number of points user receives          |
+| best        | Int     | Highest score returned from Game Center |
+| achievement | Int     | Achievement set in Game Center          |
+| reset       | Boolean | Used to restart the game                |
 
 
 
