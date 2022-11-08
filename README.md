@@ -123,15 +123,16 @@ if localPlayer != nil {
 - SlideIt Game screen
   - (Create/POST) If achievement made
 ```swift
+// initiate score instance in leaderboard
 GKScore *gScore = [[GKScore alloc]
     initWithLeaderboardIdentifier:LEADERBOARD_ID];
 gScore.value = score;
 
+// if score is reaches achievement level, add achievement
 if(score >= achievement) {
     GKAchievement *noviceAchievement =
         [[GKAchievement alloc]
         initWithIdentifier:ACHIEVEMENT_NOVICE_ID];
-
     noviceAchievement.percentComplete = 100;
     [achievements addObject:noviceAchievement];
 }
@@ -140,15 +141,16 @@ if(score >= achievement) {
 - SlideIt Game screen
   - (Create/POST) If achievement made
 ```swift
+// initiate score instance in leaderboard
 GKScore *gScore = [[GKScore alloc]
     initWithLeaderboardIdentifier:LEADERBOARD_ID];
 gScore.value = score;
 
+// if score is reaches achievement level, add achievement
 if(score >= achievement) {
     GKAchievement *noviceAchievement =
         [[GKAchievement alloc]
         initWithIdentifier:ACHIEVEMENT_NOVICE_ID];
-
     noviceAchievement.percentComplete = 100;
     [achievements addObject:noviceAchievement];
 }
