@@ -3,6 +3,28 @@ Group #1 SWIFTAF - README
 
 # Plasticity
 
+
+## Plasticity Sprint 1
+
+### User Stories
+
+#### REQUIRED (10pts)
+- [ ] User sees an app icon on the home screen.
+- [ ] User sees a styled launch screen.
+- [ ] User can sign into Game Center
+- [ ] User can sign out of Game Center.
+
+
+### App Walkthrough GIF
+`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
+
+<img src="YOUR_GIF_URL_HERE" width=250><br>
+
+### Notes
+Describe any challenges encountered while building the app.
+
+
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
