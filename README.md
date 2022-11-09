@@ -106,6 +106,19 @@ src="images/history.png" width="200">
 - Login Screen
   - (Create/POST) Login to Game Center
 ```swift
+GKLocalPlayer.local.authenticateHandler = { gcAuthVC, error in
+NotificationCenter.default.post(name: .authenticationChanged, object: GKLocalPlayer.local.isAuthenticated)
+
+if GKLocalPlayer.local.isAuthenticated {
+  GKLocalPlayer.local.register(self)
+} else if let vc = gcAuthVC {
+  self.viewController?.present(vc, animated: true)
+}
+else {
+  print("Error authentication to GameCenter: \(error?.localizedDescription ?? "none")")
+}
+}
+}
 GKLocalPlayer.local.authenticateHandler = { viewController, error in
     if let viewController = viewController {
         // Present the view controller so the player can sign in.
