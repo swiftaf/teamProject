@@ -84,19 +84,19 @@ src="images/history.png" width="200">
 
 #### POST
 
-| Property    | Type    | Description                             | 
-|-------------|---------|-----------------------------------------|
-| localPlayer | String  | User's AppleID username                 |
-| score       | Int     | Number of points user receives          |
-| reset       | Boolean | Used to restart the game                |
+| Property      | Type    | Description                             | 
+|---------------|---------|-----------------------------------------|
+| name          | String  | User's AppleID username                 |
+| score         | Int     | Number of points user receives          |
+| reset         | Boolean | Used to restart the game                |
 
 #### GET
 
-| Property    | Type    | Description                             | 
-|-------------|---------|-----------------------------------------|
-| localPlayer | String  | User's AppleID username                 |
-| best        | Int     | Highest score returned from Game Center |
-| achievement | Int     | Achievement set in Game Center          |
+| Property      | Type    | Description                             | 
+|---------------|---------|-----------------------------------------|
+| GKLocalPlayer | Object  | User's Game Center profile              |
+| best          | Int     | Highest score returned from Game Center |
+| achievement   | Int     | Achievement set in Game Center          |
 
 
 
@@ -106,30 +106,17 @@ src="images/history.png" width="200">
 - Login Screen
   - (Create/POST) Login to Game Center
 ```swift
-GKLocalPlayer.local.authenticateHandler = { gcAuthVC, error in
-NotificationCenter.default.post(name: .authenticationChanged, object: GKLocalPlayer.local.isAuthenticated)
-
-if GKLocalPlayer.local.isAuthenticated {
-  GKLocalPlayer.local.register(self)
-} else if let vc = gcAuthVC {
-  self.viewController?.present(vc, animated: true)
-}
-else {
-  print("Error authentication to GameCenter: \(error?.localizedDescription ?? "none")")
-}
-}
-}
 GKLocalPlayer.local.authenticateHandler = { viewController, error in
-    if let viewController = viewController {
-        // Present the view controller so the player can sign in.
-        return
-    }
-    if error != nil {
-        // Player could not be authenticated.
-        // Disable Game Center in the game.
-        return        
-    }
+  NotificationCenter.default.post(name: .authenticationChanged, object: GKLocalPlayer.local.isAuthenticated)
+  if GKLocalPlayer.local.isAuthenticated {
+    // user authenticated - enable gamecenter
+    GKLocalPlayer.local.register(self)
+  } else {
+    // user not authenticated - disable game center
+  }
 }
+
+
   ```
 
 - Main Screen
