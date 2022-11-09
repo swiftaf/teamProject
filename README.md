@@ -8,7 +8,7 @@ Group #1 SWIFTAF - README
 
 ### User Stories
 
-#### REQUIRED (10pts)
+#### REQUIRED
 - [ ] User sees an app icon on the home screen.
 - [ ] User sees a styled launch screen.
 - [ ] User can sign into Game Center
