@@ -13,6 +13,7 @@
 		3730AF9E291EB85700612316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3730AF9C291EB85700612316 /* Main.storyboard */; };
 		3730AFA0291EB85800612316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3730AF9F291EB85800612316 /* Assets.xcassets */; };
 		3730AFA3291EB85800612316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3730AFA1291EB85800612316 /* LaunchScreen.storyboard */; };
+		3730AFAC291EB89300612316 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3730AFAB291EB89300612316 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		3730AF9F291EB85800612316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3730AFA2291EB85800612316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3730AFA4291EB85800612316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3730AFAB291EB89300612316 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3730AFAD291EB89800612316 /* Plasticiti.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Plasticiti.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3730AFAC291EB89300612316 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +46,7 @@
 			children = (
 				3730AF95291EB85700612316 /* Plasticiti */,
 				3730AF94291EB85700612316 /* Products */,
+				3730AFAA291EB89300612316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +61,7 @@
 		3730AF95291EB85700612316 /* Plasticiti */ = {
 			isa = PBXGroup;
 			children = (
+				3730AFAD291EB89800612316 /* Plasticiti.entitlements */,
 				3730AF96291EB85700612316 /* AppDelegate.swift */,
 				3730AF98291EB85700612316 /* SceneDelegate.swift */,
 				3730AF9A291EB85700612316 /* ViewController.swift */,
@@ -65,6 +71,14 @@
 				3730AFA4291EB85800612316 /* Info.plist */,
 			);
 			path = Plasticiti;
+			sourceTree = "<group>";
+		};
+		3730AFAA291EB89300612316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3730AFAB291EB89300612316 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Plasticiti/Plasticiti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZV83F2R479;
@@ -293,6 +308,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Plasticiti/Plasticiti.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZV83F2R479;
@@ -321,6 +338,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
