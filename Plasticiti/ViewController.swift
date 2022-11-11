@@ -23,8 +23,9 @@ class ViewController: UIViewController {
                 print(error?.localizedDescription ?? "")
                 return
             }
-            
-            self.present(vc!, animated: true, completion: nil)
+            if let vc = vc {
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
     
