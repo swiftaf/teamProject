@@ -68,7 +68,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     @IBAction func submitScore(_ sender: Any) {
         let score = GKScore(leaderboardIdentifier: "WordleysWon")
-        score.value = 100
+        score.value = 200
         GKScore.report([score]) { error
             in
             guard error == nil else {
