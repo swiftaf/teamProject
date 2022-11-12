@@ -54,7 +54,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         present(vc, animated: true, completion: nil)
     }
     @IBAction func unlockAchievement(_ sender: Any) {
-        let achievment = GKAchievement(identifier: "solved50wordleys")
+        let achievment = GKAchievement(identifier: "solved1wordley")
         achievment.percentComplete = 100
         achievment.showsCompletionBanner = true
         GKAchievement.report([achievment]) { error
