@@ -1,18 +1,18 @@
 Group #1 SWIFTAF - README 
 ===
 
-# Plasticity
+# Plasticiti
 
 
-## Plasticity Sprint 1
+## Plasticiti Sprint 1
 
 ### User Stories
 
 #### REQUIRED
-- [ ] User sees an app icon on the home screen.
-- [ ] User sees a styled launch screen.
-- [ ] User can sign into Game Center
-- [ ] User can sign out of Game Center.
+- [x] User sees an app icon on the home screen.
+- [x] User sees a styled launch screen.
+- [x] User can sign into Game Center
+- [x] User can sign out of Game Center.
 
 
 ### App Walkthrough GIF
