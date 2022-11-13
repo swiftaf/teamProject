@@ -19,10 +19,6 @@ Group #1 SWIFTAF - README
 <img src="images/unit10.gif" width="369">
 
 
-### Notes
-Describe any challenges encountered while building the app.
-
-
 
 ## Table of Contents
 1. [Overview](#Overview)
