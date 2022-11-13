@@ -16,7 +16,7 @@ Group #1 SWIFTAF - README
 
 
 ### App Walkthrough GIF
-<img src="images/unit10.gif" width="396">
+<img src="images/unit10.gif" width="369">
 
 
 ### Notes
