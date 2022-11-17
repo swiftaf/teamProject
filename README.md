@@ -3,6 +3,20 @@ Group #1 SWIFTAF - README
 
 # Plasticiti
 
+## Plasticiti Sprint 2
+
+### User Stories
+
+#### REQUIRED
+- [] 
+- [] 
+- [] 
+- [] 
+
+
+### App Walkthrough GIF
+<img src="" width="369">
+
 
 ## Plasticiti Sprint 1
 
