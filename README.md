@@ -8,10 +8,10 @@ Group #1 SWIFTAF - README
 ### User Stories
 
 #### REQUIRED
-- [] 
-- [] 
-- [] 
-- [] 
+- [] User sees
+- [] User sees
+- [] User can
+- [] User can
 
 
 ### App Walkthrough GIF
