@@ -11,8 +11,8 @@ Group #1 SWIFTAF - README
 - [x] User sees the 5x6 game board.
 - [x] User sees the keyboard.
 - [x] User can use the keyboard.
-- [x] User sees the color orange highlighted when word is not in correct position.
-- [x] User sees the color green highlighted when word is in correct position.
+- [x] User sees the color orange highlighted when letter is not in correct position.
+- [x] User sees the color green highlighted when letter is in correct position.
 
 
 ### App Walkthrough GIF
