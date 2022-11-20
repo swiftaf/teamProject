@@ -30,7 +30,7 @@ class WordleyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answer = answers.randomElement() ?? "after"
-        view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1) //background
         addChildren()
     }
     

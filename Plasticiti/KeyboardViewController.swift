@@ -28,7 +28,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDelegateFlowLayo
         layout.minimumInteritemSpacing = 2
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .clear //no color
         collectionView.register(KeyCell.self, forCellWithReuseIdentifier: KeyCell.identifer)
         return collectionView
     }()
