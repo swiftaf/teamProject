@@ -65,7 +65,7 @@ extension BoardViewController{
          
          cell.backgroundColor = datasource?.boxColor(at: indexPath)
          cell.layer.borderWidth = 1
-         cell.layer.borderColor = UIColor.systemGray3.cgColor
+         cell.layer.borderColor = UIColor.white.cgColor
          
          let guesses = datasource?.currentGuesses ?? []
          if let letter = guesses[indexPath.section][indexPath.row]{
@@ -87,10 +87,10 @@ extension BoardViewController{
   
          
          return UIEdgeInsets(
-             top: 2,
-             left: 2,
-             bottom: 2,
-             right: 2
+            top: 2,
+            left: 2,
+            bottom: 2,
+            right: 2
          )
          
      }

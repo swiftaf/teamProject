@@ -7,7 +7,9 @@
 
 import UIKit
 
+
 class WordleyViewController: UIViewController {
+    
     
     let answers = [
        "later", "bloke", "there", "ultra"
@@ -28,7 +30,7 @@ class WordleyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         answer = answers.randomElement() ?? "after"
-        view.backgroundColor = .systemCyan
+        view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1)
         addChildren()
     }
     
@@ -114,10 +116,10 @@ extension WordleyViewController: BoardViewControllerDatasource {
         //if letter is in correct slot and correct positon return green
         
         if indexedAnswer[indexPath.row] == letter {
-            return .systemGreen
+            return #colorLiteral(red: 0.2333551347, green: 0.558046639, blue: 0.5564038157, alpha: 1)
         }
         
         //if letter is not in proper slot return orange
-        return .systemOrange
+        return #colorLiteral(red: 0.959214747, green: 0.6740495563, blue: 0.5677136779, alpha: 1)
     }
 }

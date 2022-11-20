@@ -21,7 +21,7 @@ class KeyCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemGray5
+        backgroundColor = #colorLiteral(red: 0.09120073169, green: 0.2949831188, blue: 0.4485020638, alpha: 1)
         contentView.addSubview(label)
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
