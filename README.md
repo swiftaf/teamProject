@@ -9,7 +9,7 @@ Group #1 SWIFTAF - README
 
 #### REQUIRED
 - [x] User sees the 6x5 game board.
-- [x] User can see the title of the game Worldey.
+- [x] User can see the title of the game Wordley.
 - [x] User sees the keyboard.
 - [x] User can use the keyboard.
 - [x] User sees the color pink highlighted when letter is not in correct position.
