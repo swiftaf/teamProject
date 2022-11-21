@@ -8,15 +8,15 @@ Group #1 SWIFTAF - README
 ### User Stories
 
 #### REQUIRED
-- [x] User sees the 5x6 game board.
+- [x] User sees the 6x5 game board.
 - [x] User sees the keyboard.
 - [x] User can use the keyboard.
-- [x] User sees the color orange highlighted when letter is not in correct position.
+- [x] User sees the color pink highlighted when letter is not in correct position.
 - [x] User sees the color green highlighted when letter is in correct position.
 
 
 ### App Walkthrough GIF
-<img src="" width="369">
+<img src="http://g.recordit.co/V48uewEXRx.gif" width="369">
 
 
 ## Plasticiti Sprint 1
