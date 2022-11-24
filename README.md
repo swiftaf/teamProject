@@ -9,7 +9,7 @@ Group #1 SWIFTAF - README
 ### User Stories
 
 #### REQUIRED
-- [] User can see the home page to navigate to the game.
+- [x] User can see the home page to navigate to the game.
 - [] User can see 
 - [] User sees 
 
