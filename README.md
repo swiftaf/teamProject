@@ -3,6 +3,20 @@ Group #1 SWIFTAF - README
 
 # Plasticiti
 
+
+## Plasticiti Sprint 3
+
+### User Stories
+
+#### REQUIRED
+- [] User can see the home page to navigate to the game.
+- [] User can see 
+- [] User sees 
+
+### App Walkthrough GIF
+<img src="" width="369">
+
+
 ## Plasticiti Sprint 2
 
 ### User Stories
