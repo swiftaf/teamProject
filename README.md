@@ -9,9 +9,9 @@ Group #1 SWIFTAF - README
 ### User Stories
 
 #### REQUIRED
-- [x] User can see the home page to navigate to the game.
-- [] User can see 
-- [] User sees 
+- [x] User can see the 3x3 grid.
+- [x] User sees the title SlideIt.
+- [x] User sess a message when Cross or Noughts win
 
 ### App Walkthrough GIF
 <img src="" width="369">
