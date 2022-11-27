@@ -14,7 +14,7 @@ Group #1 SWIFTAF - README
 - [x] User sess a message when Cross or Noughts win
 
 ### App Walkthrough GIF
-<img src="" width="369">
+<img src="http://g.recordit.co/QNxrD2BCFt.gif" width="369">
 
 
 ## Plasticiti Sprint 2
