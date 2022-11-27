@@ -18,6 +18,7 @@
 		C24A7E852929419E002433A8 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A7E842929419E002433A8 /* BoardViewController.swift */; };
 		C24A7E8729294276002433A8 /* WordleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A7E8629294276002433A8 /* WordleyViewController.swift */; };
 		C24A7E8929294EEC002433A8 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A7E8829294EEC002433A8 /* KeyCell.swift */; };
+		C25F88022933DA5300A3CB59 /* SlideItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25F88012933DA5300A3CB59 /* SlideItViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C24A7E842929419E002433A8 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		C24A7E8629294276002433A8 /* WordleyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleyViewController.swift; sourceTree = "<group>"; };
 		C24A7E8829294EEC002433A8 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
+		C25F88012933DA5300A3CB59 /* SlideItViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideItViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				C24A7E842929419E002433A8 /* BoardViewController.swift */,
 				C24A7E8629294276002433A8 /* WordleyViewController.swift */,
 				C24A7E8829294EEC002433A8 /* KeyCell.swift */,
+				C25F88012933DA5300A3CB59 /* SlideItViewController.swift */,
 			);
 			path = Plasticiti;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				3730AF9B291EB85700612316 /* ViewController.swift in Sources */,
 				C24A7E8929294EEC002433A8 /* KeyCell.swift in Sources */,
 				C24A7E8729294276002433A8 /* WordleyViewController.swift in Sources */,
+				C25F88022933DA5300A3CB59 /* SlideItViewController.swift in Sources */,
 				3730AF97291EB85700612316 /* AppDelegate.swift in Sources */,
 				3730AF99291EB85700612316 /* SceneDelegate.swift in Sources */,
 				C24A7E832929418C002433A8 /* KeyboardViewController.swift in Sources */,
