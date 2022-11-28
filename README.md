@@ -11,7 +11,8 @@ Group #1 SWIFTAF - README
 #### REQUIRED
 - [x] User can see the 3x3 grid.
 - [x] User sees the title SlideIt.
-- [x] User sess a message when Cross or Noughts win
+- [x] User sees who's turn it is to play.
+- [x] User sess a message when Cross or Noughts win.
 
 ### App Walkthrough GIF
 <img src="http://g.recordit.co/QNxrD2BCFt.gif" width="369">
