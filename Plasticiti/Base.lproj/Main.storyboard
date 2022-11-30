@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kqP-ek-l6e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHx-Kv-wRt">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,7 +76,7 @@
             <objects>
                 <viewController id="M4e-Ft-iHk" customClass="WordleyViewController" customModule="Plasticiti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qh6-v9-mgu">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wordley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huX-Sw-iuc">
@@ -99,11 +100,11 @@
             <objects>
                 <viewController id="kqP-ek-l6e" customClass="SlideItViewController" customModule="Plasticiti" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uqt-A1-mZB">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2Hk-HM-8Jg">
-                                <rect key="frame" x="21.333333333333343" y="275.33333333333337" width="385.33333333333326" height="385.33333333333337"/>
+                                <rect key="frame" x="21.333333333333343" y="265.33333333333337" width="385.33333333333326" height="385.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gpX-Aj-Wxq">
                                         <rect key="frame" x="0.0" y="0.0" width="385.33333333333331" height="125"/>
@@ -293,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pQ-fg-Vew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231.7757009345792" y="86.825053995680349"/>
+            <point key="canvasLocation" x="1406" y="783"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rpp-rM-BE4">
@@ -304,13 +305,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient2" translatesAutoresizingMaskIntoConstraints="NO" id="NC1-wK-m1H">
-                                <rect key="frame" x="-130" y="-8" width="688" height="909"/>
+                                <rect key="frame" x="-130" y="-5" width="688" height="906"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="688" id="2fq-FR-LV4"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lets Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bg-rc-RQb">
-                                <rect key="frame" x="45" y="230" width="279" height="57"/>
+                                <rect key="frame" x="45" y="233" width="279" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="1ej-AI-eNs"/>
                                 </constraints>
@@ -319,7 +320,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQJ-es-nIY">
-                                <rect key="frame" x="45" y="185" width="279" height="57"/>
+                                <rect key="frame" x="45" y="188" width="279" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="U7B-ik-4fL"/>
                                 </constraints>
@@ -328,7 +329,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3G-3O-IPO">
-                                <rect key="frame" x="0.0" y="342" width="439" height="593"/>
+                                <rect key="frame" x="0.0" y="345" width="439" height="590"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="butDarkPink" translatesAutoresizingMaskIntoConstraints="NO" id="cST-RK-T49">
                                         <rect key="frame" x="29" y="40" width="374" height="160"/>
@@ -343,7 +344,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOL-Fe-gtd">
-                                        <rect key="frame" x="29" y="92" width="374" height="51"/>
+                                        <rect key="frame" x="29" y="90.333333333333314" width="374" height="54.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Play Wordley">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -369,6 +370,9 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                             <color key="baseForegroundColor" red="0.65312336400612114" green="0.14582326791019601" blue="0.19798134182529128" alpha="0.6459051638035076" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="kqP-ek-l6e" kind="presentation" id="Ciu-vt-UqL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -398,7 +402,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z09-fk-xzQ">
-                                <rect key="frame" x="45" y="132" width="62.666666666666657" height="57"/>
+                                <rect key="frame" x="45" y="135" width="62.666666666666657" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="6Fj-yF-RWu"/>
                                 </constraints>
@@ -407,14 +411,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="240" verticalHuggingPriority="251" image="roundedWhite" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-Zq-VU0">
-                                <rect key="frame" x="-1.6666666666666572" y="284" width="431.33333333333326" height="79"/>
+                                <rect key="frame" x="-1.6666666666666572" y="287" width="431.33333333333326" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="965" constant="79" id="G4v-3L-NwV"/>
                                     <constraint firstAttribute="width" priority="965" constant="431" id="vdX-Lr-fzn"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZx-Kx-Ap3">
-                                <rect key="frame" x="115" y="132" width="279" height="57"/>
+                                <rect key="frame" x="115" y="135" width="279" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="JDs-Sb-t1c"/>
                                     <constraint firstAttribute="width" constant="279" id="Uys-f7-RjB"/>
