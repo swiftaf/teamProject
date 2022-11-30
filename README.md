@@ -4,6 +4,21 @@ Group #1 SWIFTAF - README
 # Plasticiti
 
 
+
+## Plasticiti Final Build Sprint
+
+### User Stories
+
+#### REQUIRED
+- [ ] User sees a home page to navigate to Wordley game.
+- [ ] User sees a home page to navigate to SlideIt game.
+- [ ] User can see the progress of the game.
+
+
+### App Walkthrough GIF
+<img src="" width="369">
+
+
 ## Plasticiti Sprint 3
 
 ### User Stories
