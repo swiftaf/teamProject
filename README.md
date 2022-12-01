@@ -12,8 +12,9 @@ Group #1 SWIFTAF - README
 #### REQUIRED
 - [x] User sees a home page to navigate to Wordley game.
 - [x] User sees a home page to navigate to SlideIt game.
-- [ ] User can see the progress of the game.
-- [ ] User sees a Scoreboard Tracker. 
+- [ ] User can see the game progress tracked through Game Center.
+- [ ] User can see victory when user wins a game.
+- [ ] User can see loss when user loses game.
 
 
 ### App Walkthrough GIF
