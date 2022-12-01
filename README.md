@@ -10,8 +10,8 @@ Group #1 SWIFTAF - README
 ### User Stories
 
 #### REQUIRED
-- [ ] User sees a home page to navigate to Wordley game.
-- [ ] User sees a home page to navigate to SlideIt game.
+- [x] User sees a home page to navigate to Wordley game.
+- [x] User sees a home page to navigate to SlideIt game.
 - [ ] User can see the progress of the game.
 - [ ] User sees a Scoreboard Tracker. 
 
