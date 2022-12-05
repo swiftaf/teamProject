@@ -37,7 +37,7 @@ private let collectionView: UICollectionView = {
      NSLayoutConstraint.activate([
          collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
          collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
-         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+         collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
          collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
      ])
      

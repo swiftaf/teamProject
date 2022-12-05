@@ -42,7 +42,7 @@ class KeyboardViewController: UIViewController, UICollectionViewDelegateFlowLayo
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
         

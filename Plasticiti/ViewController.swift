@@ -10,7 +10,6 @@ import GameKit
 import SwiftUI
 
 
-
 class ViewController: UIViewController, GKGameCenterControllerDelegate {
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
@@ -22,8 +21,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         super.viewDidLoad()
         authenticateUser()
     }
-    
-    private func authenticateUser(){
+    @IBOutlet weak var username: UILabel!
+    func authenticateUser(){
         let player = GKLocalPlayer.local
         
         player.authenticateHandler = { vc, error in
@@ -36,9 +35,13 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 GKAccessPoint.shared.showHighlights = true
                 GKAccessPoint.shared.isActive = true
                 self.present(vc, animated: true, completion: nil)
+                self.username.text = player.displayName;
+                
             }
         }
     }
+    
+    
     
     @IBAction func showAchievements(_ sender: Any) {
         let vc = GKGameCenterViewController()
@@ -88,3 +91,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
 //        gameCenterViewController.dismiss(animated: true, completion: nil)
 //    }
 //}
+
+
+
+
+

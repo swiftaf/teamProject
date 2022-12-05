@@ -58,7 +58,7 @@ class WordleyViewController: UIViewController {
             boardVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             boardVC.view.bottomAnchor.constraint(equalTo: keyboardVC.view.topAnchor),
             boardVC.view.heightAnchor.constraint(equalTo: view.heightAnchor,
-                                                 multiplier: 0.6),
+                                                 multiplier: 0.65),
             
             keyboardVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             keyboardVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),

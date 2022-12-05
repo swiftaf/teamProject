@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import GameKit
 
-class SlideItViewController: UIViewController {
+
+
+
+class SlideItViewController: UIViewController, GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
 
     enum Turn{
         case Nought
@@ -39,7 +46,26 @@ class SlideItViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authenticateUser()
         initPanel()
+    }
+    
+    func authenticateUser(){
+        let player = GKLocalPlayer.local
+        
+        player.authenticateHandler = { vc, error in
+            guard error == nil else {
+                print(error?.localizedDescription ?? "")
+                return
+            }
+            if let vc = vc {
+                GKAccessPoint.shared.location = .topLeading
+                GKAccessPoint.shared.showHighlights = true
+                GKAccessPoint.shared.isActive = true
+                self.present(vc, animated: true, completion: nil)
+                
+            }
+        }
     }
     
     func initPanel() {
@@ -119,6 +145,18 @@ class SlideItViewController: UIViewController {
     }
     
     func result(title: String)  {
+        let achievment = GKAchievement(identifier: "wonAtSlideIt")
+        achievment.percentComplete = 100
+        achievment.showsCompletionBanner = true
+        GKAchievement.report([achievment]) { error
+            in
+            guard error == nil else {
+                print(error?.localizedDescription ?? "")
+                return
+            }
+            print("done!")
+        }
+
         let ac = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
         ac.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
             self.resetPanel()
