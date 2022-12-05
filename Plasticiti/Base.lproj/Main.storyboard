@@ -7,19 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Poppins-Bold.ttf">
-            <string>Poppins-Bold</string>
-        </array>
-        <array key="Poppins-SemiBold.ttf">
-            <string>Poppins-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Plasticiti" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +200,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="backArrow"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="ECv-jy-hHF"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="edC-VF-rQd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -421,7 +413,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="backArrow" title=""/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Hmi-NR-RET"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Wnv-Ig-DV7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -458,16 +450,16 @@
         <!--View Controller-->
         <scene sceneID="rpp-rM-BE4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pr-V0-API" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="uHx-Kv-wRt" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="fpF-9X-M2A"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pr-V0-API" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1713" y="-67"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ECv-jy-hHF"/>
+        <segue reference="edC-VF-rQd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backArrow" width="36.333332061767578" height="28.333333969116211"/>

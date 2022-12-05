@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import GameKit
 
-
-class WordleyViewController: UIViewController {
+class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     
     let answers = [
@@ -22,16 +27,36 @@ class WordleyViewController: UIViewController {
         count: 6
     )
 
-    
     let keyboardVC = Plasticiti.KeyboardViewController()
     let boardVC = BoardViewController()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authenticateUser()
         answer = answers.randomElement() ?? "after"
         view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1) //background
         addChildren()
+    }
+
+    func authenticateUser(){
+        let player = GKLocalPlayer.local
+        print("game center loaded")
+        
+        player.authenticateHandler = { vc, error in
+            guard error == nil else {
+                print(error?.localizedDescription ?? "")
+                return
+            }
+            if let vc = vc {
+                GKAccessPoint.shared.location = .topLeading
+                GKAccessPoint.shared.showHighlights = true
+                GKAccessPoint.shared.isActive = true
+                self.present(vc, animated: true, completion: nil)
+                
+                
+            }
+        }
     }
     
     private func addChildren(){
@@ -68,6 +93,13 @@ class WordleyViewController: UIViewController {
         ])
         
     }
+    
+    func clearBaord() {
+        guesses = guesses.map { _ in [] }
+        boardVC.reloadData()
+        print("restarting")
+
+    }
 }
 
 extension WordleyViewController: KeyboardViewControllerDelegate {
@@ -101,6 +133,7 @@ extension WordleyViewController: BoardViewControllerDatasource {
     
     func boxColor(at indexPath: IndexPath) -> UIColor? {
         let rowIndex = indexPath.section
+        
         let count = guesses[rowIndex].compactMap({ $0 }).count
         guard count == 5 else {
             return nil
@@ -116,28 +149,50 @@ extension WordleyViewController: BoardViewControllerDatasource {
         //if letter is in correct slot and correct positon return green
         
         if indexedAnswer[indexPath.row] == letter {
-            
-            let oldGuesses = guesses[indexPath.row]
-            let newGuesses = oldGuesses.flatMap{ $0 }
-            if indexedAnswer == newGuesses {
-                
+            let optGuesses = guesses[indexPath.row]
+            let unwrappedGuesses = optGuesses.flatMap{ $0 }
+            if indexedAnswer == unwrappedGuesses {
+
                 // game won
-                
+
+
+                // Game Center  acheivement
+                let achievment = GKAchievement(identifier: "wonAtWordley")
+                achievment.percentComplete = 100
+                achievment.showsCompletionBanner = true
+                GKAchievement.report([achievment]) { error
+                    in
+                    guard error == nil else {
+                        print(error?.localizedDescription ?? "")
+                        return
+                    }
+                    print("done!")
+                }
                 print("game won")
+
+                // reset button
+
+                let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                ac.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
+                    print("before: ", self.guesses)
+                    self.clearBaord()
+                    print("after: ", self.guesses)
+                }))
+                self.present(ac, animated: true)
+
             }
-            
-            return #colorLiteral(red: 0.2333551347, green: 0.558046639, blue: 0.5564038157, alpha: 1)
-        }
+                  
+                return #colorLiteral(red: 0.2333551347, green: 0.558046639, blue: 0.5564038157, alpha: 1)
+            }
         
-        if rowIndex == 5 {
-            
+            if rowIndex == 5 {
+
             // game lost
-            
-            print("game lost")
-        }
+
+                print("game lost")
+            }
         //if letter is not in proper slot return orange
         return #colorLiteral(red: 0.959214747, green: 0.6740495563, blue: 0.5677136779, alpha: 1)
-        
-        
+        }
     }
-}
+
