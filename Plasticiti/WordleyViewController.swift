@@ -73,6 +73,7 @@ class WordleyViewController: UIViewController {
 extension WordleyViewController: KeyboardViewControllerDelegate {
     func KeyboardViewController(_ vc: KeyboardViewController, didTapKey letter: Character) {
         print(letter)
+        print(answer)
         
         //update the guesses and then let boardvc know to reload
         var stop = false
@@ -100,7 +101,6 @@ extension WordleyViewController: BoardViewControllerDatasource {
     
     func boxColor(at indexPath: IndexPath) -> UIColor? {
         let rowIndex = indexPath.section
-        
         let count = guesses[rowIndex].compactMap({ $0 }).count
         guard count == 5 else {
             return nil
@@ -116,10 +116,28 @@ extension WordleyViewController: BoardViewControllerDatasource {
         //if letter is in correct slot and correct positon return green
         
         if indexedAnswer[indexPath.row] == letter {
+            
+            let oldGuesses = guesses[indexPath.row]
+            let newGuesses = oldGuesses.flatMap{ $0 }
+            if indexedAnswer == newGuesses {
+                
+                // game won
+                
+                print("game won")
+            }
+            
             return #colorLiteral(red: 0.2333551347, green: 0.558046639, blue: 0.5564038157, alpha: 1)
         }
         
+        if rowIndex == 5 {
+            
+            // game lost
+            
+            print("game lost")
+        }
         //if letter is not in proper slot return orange
         return #colorLiteral(red: 0.959214747, green: 0.6740495563, blue: 0.5677136779, alpha: 1)
+        
+        
     }
 }
