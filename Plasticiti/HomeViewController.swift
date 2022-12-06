@@ -27,7 +27,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         super.viewDidLoad()
         self.gameCenterHelper = GameCenterHelper(vc: self)
         self.gameCenterHelper.loadGameCenter()
-        self.username.text = GKLocalPlayer.local.alias
+        self.username.text = gameCenterHelper.playerName
         
        // authenticateUser()
         print("player:", GKLocalPlayer.local.alias)

@@ -12,7 +12,7 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
     
     private let leaderboardID = "solved1wordley"
     
-    let inviteMessage:String = "Hey there join me for a iVaccination fight!"
+    let inviteMessage:String = ""
     var currentVC: GKMatchmakerViewController?
     
     //
@@ -36,8 +36,9 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
                 GKAccessPoint.shared.parentWindow = self.viewController?.view.window
                 GKAccessPoint.shared.location = .topTrailing
                 GKAccessPoint.shared.showHighlights = true
-                GKAccessPoint.shared.showHighlights = true
                 GKAccessPoint.shared.isActive = GKLocalPlayer.local.isAuthenticated
+                
+                print("player:", GKLocalPlayer.local.alias)
                 
 
 //                let observation2 = GKAccessPoint.shared.observe(
@@ -68,6 +69,7 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
             }
         }
     }
+    var playerName = GKLocalPlayer.local.alias
     
     func showDashboard(){
         let viewController = GKGameCenterViewController(state: .dashboard)
@@ -95,13 +97,6 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
         })
     }
     
-    func updateVaccinations(with value: Int) {
-        GKLeaderboard.submitScore(value, context: 0, player: GKLocalPlayer.local, leaderboardIDs: [self.leaderboardID],  completionHandler: {error in
-            if(error != nil){
-                print("Error uploading score to Game Center leaderboard: \(String(describing: error))")
-            }
-        })
-    }
 }
 
 
@@ -118,3 +113,6 @@ extension Notification.Name {
   static let presentGame = Notification.Name(rawValue: "presentGame")
   static let authenticationChanged = Notification.Name(rawValue: "authenticationChanged")
 }
+
+    
+
