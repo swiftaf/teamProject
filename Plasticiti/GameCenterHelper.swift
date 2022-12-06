@@ -34,7 +34,7 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
                 GKLocalPlayer.local.register(self)
                 
                 GKAccessPoint.shared.parentWindow = self.viewController?.view.window
-                GKAccessPoint.shared.location = .topTrailing
+                GKAccessPoint.shared.location = .topLeading
                 GKAccessPoint.shared.showHighlights = true
                 GKAccessPoint.shared.isActive = GKLocalPlayer.local.isAuthenticated
                 

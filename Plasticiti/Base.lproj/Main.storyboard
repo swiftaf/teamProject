@@ -109,7 +109,7 @@
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
                                 <attributedString key="attributedText">
-                                    <fragment content="Username">
+                                    <fragment content="scoopnisker">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="30" name="Poppins-Bold"/>
@@ -164,13 +164,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GCr-yX-YaO"/>
-                    <connections>
-                        <outlet property="username" destination="Vlb-tN-VBP" id="cwI-Dz-ncD"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-400.93457943925233" y="59.611231101511883"/>
+            <point key="canvasLocation" x="-527" y="60"/>
         </scene>
         <!--Wordley View Controller-->
         <scene sceneID="dem-9Z-XSy">

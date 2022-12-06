@@ -7,37 +7,37 @@
 
 import UIKit
 import GameKit
-import SwiftUI
+//import SwiftUI
 
 
-class ViewController: UIViewController, GKGameCenterControllerDelegate {
+class ViewController: UIViewController {
     var gameCenterHelper:GameCenterHelper!
     
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-        
-        
-        
-    }
-
-    
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GKAccessPoint.shared.isActive = true;
         self.gameCenterHelper = GameCenterHelper(vc: self)
         self.gameCenterHelper.loadGameCenter()
-        self.username.text = gameCenterHelper.playerName
+        GKAccessPoint.shared.isActive = true;
+        //self.username.text = gameCenterHelper.playerName
         
        // authenticateUser()
         print("player:", GKLocalPlayer.local.alias)
     }
-    @IBOutlet weak var username: UILabel!
+    //@IBOutlet weak var username: UILabel!
     
-    
-    
+
+//    let profileVC = GKGameCenterViewController(state: .localPlayerProfile)
+//    profileVC;.gameCenterDelegate = self
+//
+//    present(profileVC, animated: true, completion: nil)
+
+
 }
-    
+
+
+
 //    func authenticateUser(){
 //        let player = GKLocalPlayer.local
 //
@@ -102,11 +102,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
 
 
 
-//extension ViewController: GKGameCenterControllerDelegate {
-//    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-//        gameCenterViewController.dismiss(animated: true, completion: nil)
-//    }
-//}
+extension ViewController: GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+}
 //extension GKAccessPoint {
 //  enum Location : Int {
 //    init?(rawValue: Int)

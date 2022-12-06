@@ -34,8 +34,9 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GKAccessPoint.shared.isActive = false
 //        btnBack.addTarget(self, action: #selector(tapOnButton), for: .touchUpInside)
-        authenticateUser()
+//        authenticateUser()
         answer = answers.randomElement() ?? "after"
         view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1) //background
         addChildren()
@@ -47,25 +48,26 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
 //        self.present(home, animated: true, completion: nil)
 //    }
 
-    func authenticateUser(){
-        let player = GKLocalPlayer.local
-        print("game center loaded")
-        
-        player.authenticateHandler = { vc, error in
-            guard error == nil else {
-                print(error?.localizedDescription ?? "")
-                return
-            }
-            if let vc = vc {
-                GKAccessPoint.shared.location = .topLeading
-                GKAccessPoint.shared.showHighlights = true
-                GKAccessPoint.shared.isActive = true
-                self.present(vc, animated: true, completion: nil)
-                
-                
-            }
-        }
-    }
+//    func authenticateUser(){
+//        let player = GKLocalPlayer.local
+//        print("game center loaded")
+//
+//        player.authenticateHandler = { vc, error in
+//            guard error == nil else {
+//                print(error?.localizedDescription ?? "")
+//                return
+//            }
+//            if let vc = vc {
+//                GKAccessPoint.shared.location = .topLeading
+//                GKAccessPoint.shared.showHighlights = true
+//                GKAccessPoint.shared.isActive = true
+//
+//                self.present(vc, animated: true, completion: nil)
+//
+//
+//            }
+//        }
+//    }
     
     private func addChildren(){
         addChild(keyboardVC)
@@ -196,6 +198,29 @@ extension WordleyViewController: BoardViewControllerDatasource {
             if rowIndex == 5 {
 
             // game lost
+                
+                let achievment = GKAchievement(identifier: "lostAtWordley")
+                achievment.percentComplete = 100
+                achievment.showsCompletionBanner = true
+                GKAchievement.report([achievment]) { error
+                    in
+                    guard error == nil else {
+                        print(error?.localizedDescription ?? "")
+                        return
+                    }
+                    print("done!")
+                }
+                print("game won")
+
+                // reset button
+
+                let ac = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+                ac.addAction(UIAlertAction(title: "Reset", style: .default, handler: { (_) in
+                    print("before: ", self.guesses)
+                    self.clearBaord()
+                    print("after: ", self.guesses)
+                }))
+                self.present(ac, animated: true)
 
                 print("game lost")
             }
