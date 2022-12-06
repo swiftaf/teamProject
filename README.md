@@ -18,7 +18,7 @@ Group #1 SWIFTAF - README
 
 
 ### App Walkthrough GIF
-<img src="" width="369">
+<img src="images/unit13.gif" width="370">
 
 
 ## Plasticiti Sprint 3
