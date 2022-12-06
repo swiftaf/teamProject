@@ -15,6 +15,7 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
     
     
     
+//    @IBOutlet weak var btnBack: UIButton!
     
     let answers = [
         "later", "bloke", "there", "ultra", "dealt", "canoe", "arose", "irate", "coals", "ranch", "yards", "stale", "plane", "horse", "stare", "badly", "blimp", "finch", "funny", "audio", "round", "tepid", "stare", "least", "audit", "learn", "ounce", "untie", "strap", "right", "brave", "avert", "there", "baker", "snarl", "maple", "inane", "valet", "medal", "unite", "rainy", "spell", "dream", "photo", "aloud", "inept", "piney", "waltz", "libel", "sneak", "carry", "flout", "foggy", "fault", "spiel", "denim", "spade", "catch", "floor", "equal", "ionic", "valid"
@@ -33,11 +34,18 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        btnBack.addTarget(self, action: #selector(tapOnButton), for: .touchUpInside)
         authenticateUser()
         answer = answers.randomElement() ?? "after"
         view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1) //background
         addChildren()
     }
+    
+//    @objc func tapOnButton(){
+//        let wordley = UIStoryboard(name: "Wordley", bundle: nil)
+//        let home = wordley.instantiateViewController(withIdentifier: "HomeController") as! ViewController
+//        self.present(home, animated: true, completion: nil)
+//    }
 
     func authenticateUser(){
         let player = GKLocalPlayer.local
