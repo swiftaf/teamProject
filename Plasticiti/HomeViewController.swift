@@ -16,10 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GKAccessPoint.shared.isActive = true;
+        
         self.gameCenterHelper = GameCenterHelper(vc: self)
         self.gameCenterHelper.loadGameCenter()
-        GKAccessPoint.shared.isActive = true;
+        GKAccessPoint.shared.isActive = true
+        GKAccessPoint.shared.showHighlights = true
         //self.username.text = gameCenterHelper.playerName
         
        // authenticateUser()

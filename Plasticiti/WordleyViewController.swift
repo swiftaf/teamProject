@@ -42,33 +42,6 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
         addChildren()
     }
     
-//    @objc func tapOnButton(){
-//        let wordley = UIStoryboard(name: "Wordley", bundle: nil)
-//        let home = wordley.instantiateViewController(withIdentifier: "HomeController") as! ViewController
-//        self.present(home, animated: true, completion: nil)
-//    }
-
-//    func authenticateUser(){
-//        let player = GKLocalPlayer.local
-//        print("game center loaded")
-//
-//        player.authenticateHandler = { vc, error in
-//            guard error == nil else {
-//                print(error?.localizedDescription ?? "")
-//                return
-//            }
-//            if let vc = vc {
-//                GKAccessPoint.shared.location = .topLeading
-//                GKAccessPoint.shared.showHighlights = true
-//                GKAccessPoint.shared.isActive = true
-//
-//                self.present(vc, animated: true, completion: nil)
-//
-//
-//            }
-//        }
-//    }
-    
     private func addChildren(){
         addChild(keyboardVC)
         keyboardVC.didMove(toParent: self)

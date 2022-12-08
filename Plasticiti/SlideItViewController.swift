@@ -49,6 +49,7 @@ class SlideItViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         GKAccessPoint.shared.isActive = false
+        GKAccessPoint.shared.showHighlights = true
 //        authenticateUser()
         initPanel()
     }
