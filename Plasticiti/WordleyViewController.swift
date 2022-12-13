@@ -13,9 +13,10 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
     
+
+
     
-    
-    @IBOutlet weak var btnBack: UIButton!
+   
     
     let answers = [
         "later", "bloke", "there", "ultra", "dealt", "canoe", "arose", "irate", "coals", "ranch", "yards", "stale", "plane", "horse", "stare", "badly", "blimp", "finch", "funny", "audio", "round", "tepid", "stare", "least", "audit", "learn", "ounce", "untie", "strap", "right", "brave", "avert", "there", "baker", "snarl", "maple", "inane", "valet", "medal", "unite", "rainy", "spell", "dream", "photo", "aloud", "inept", "piney", "waltz", "libel", "sneak", "carry", "flout", "foggy", "fault", "spiel", "denim", "spade", "catch", "floor", "equal", "ionic", "valid"
@@ -40,7 +41,13 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
         answer = answers.randomElement() ?? "after"
         view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1) //background
         addChildren()
+        
     }
+    
+//    func buttonAction(sender: UIButton!) {
+//        print("button clicked")
+//        performSegue(withIdentifier: "wordleySegueID", sender: nil)
+//    }
     
     private func addChildren(){
         addChild(keyboardVC)

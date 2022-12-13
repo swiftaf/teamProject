@@ -13,11 +13,7 @@ import GameKit
 
 class SlideItViewController: UIViewController {
     
-//class SlideItViewController: UIViewController, GKGameCenterControllerDelegate {
-//    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-//        gameCenterViewController.dismiss(animated: true, completion: nil)
-//    }
-        
+
     enum Turn{
         case Nought
         case Cross
@@ -54,23 +50,6 @@ class SlideItViewController: UIViewController {
         initPanel()
     }
     
-//    func authenticateUser(){
-//        let player = GKLocalPlayer.local
-//
-//        player.authenticateHandler = { vc, error in
-//            guard error == nil else {
-//                print(error?.localizedDescription ?? "")
-//                return
-//            }
-//            if let vc = vc {
-//                GKAccessPoint.shared.location = .topLeading
-//                GKAccessPoint.shared.showHighlights = true
-//                GKAccessPoint.shared.isActive = true
-//                self.present(vc, animated: true, completion: nil)
-//
-//            }
-//        }
-//    }
     
     func initPanel() {
         panel.append(a1)
