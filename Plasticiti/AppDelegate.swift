@@ -6,20 +6,23 @@
 //
 
 import UIKit
+import GameKit
 
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
-        // Override point for customization after application launch.
-        
-        
-        
+        let gameCenterHelper:GameCenterHelper!
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeVC = storyBoard.instantiateViewController(withIdentifier: "homeVC") as! ViewController
+        //Override point for customization after application launch.
+        gameCenterHelper = GameCenterHelper(vc: homeVC)
+        gameCenterHelper.loadGameCenter()
+        if GKLocalPlayer.local.isAuthenticated {
+            homeVC.username?.text = GKLocalPlayer.local.alias
+        }
         return true
     }
 

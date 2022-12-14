@@ -11,22 +11,82 @@ import GameKit
 
 
 class ViewController: UIViewController {
-    var gameCenterHelper:GameCenterHelper!
     
+//    var gameCenterHelper:GameCenterHelper!
+    
+    
+    @IBOutlet weak var username: UILabel!
+  
+    
+    
+    
+//    func getTopMostViewController() -> UIViewController? {
+//        var topMostViewController = UIApplication.shared.windows[0].rootViewController
+//
+//        while let presentedViewController = topMostViewController?.presentedViewController {
+//            topMostViewController = presentedViewController
+//        }
+//
+//        return topMostViewController
+//    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        self.gameCenterHelper = GameCenterHelper(vc: self)
-        self.gameCenterHelper.loadGameCenter()
+        print("viewDidLoad")
+
+
+//        loadView()
+//        print("view:",view!)
+        GKAccessPoint.shared.parentWindow = self.view.window
         GKAccessPoint.shared.isActive = true
         GKAccessPoint.shared.showHighlights = true
-        //self.username.text = gameCenterHelper.playerName
         
-       // authenticateUser()
-        print("player:", GKLocalPlayer.local.alias)
+//        while GKLocalPlayer.local.isAuthenticated != true {
+//            username.text = "Not Logged In"
+//        }
+//        self.loadView()
+        username.text = GKLocalPlayer.local.alias
+        
+        
+        //  if username != nil {
+//            username.text = GKLocalPlayer.local.alias
+//        } else {
+//            username.text = "User"
+//        }
+
+        //print("parent window:", GKAccessPoint.shared.parentWindow)
     }
-    //@IBOutlet weak var username: UILabel!
+    
+
+   
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+        print("GKLocalPlayer.local.alias:", GKLocalPlayer.local.alias)
+
+//        if GKLocalPlayer.local.isAuthenticated {
+//            username.text = GKLocalPlayer.local.alias
+//        } else {
+//            self.loadView()
+//            username.text = GKLocalPlayer.local.alias
+//        }
+        
+//
+//
+//        GKAccessPoint.shared.isActive = true
+//        GKAccessPoint.shared.showHighlights = true
+//
+//
+    }
+    
+    
+
+    
+    
+    
+
     
 
 //    let profileVC = GKGameCenterViewController(state: .localPlayerProfile)

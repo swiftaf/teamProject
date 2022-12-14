@@ -10,7 +10,7 @@ import GameKit
 
 class GameCenterHelper: NSObject, GKLocalPlayerListener {
     
-    private let leaderboardID = "solved1wordley"
+    private let leaderboardID = ""
     
     let inviteMessage:String = ""
     var currentVC: GKMatchmakerViewController?
@@ -32,34 +32,16 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
 
             if GKLocalPlayer.local.isAuthenticated {
                 GKLocalPlayer.local.register(self)
+                self.viewController?.viewDidAppear(true)
                 
-                GKAccessPoint.shared.parentWindow = self.viewController?.view.window
+                //GKAccessPoint.shared.parentWindow = self.viewController?.view.window
+               
                 GKAccessPoint.shared.location = .topLeading
                 GKAccessPoint.shared.showHighlights = true
                 GKAccessPoint.shared.isActive = GKLocalPlayer.local.isAuthenticated
                 
-                print("player:", GKLocalPlayer.local.alias)
                 
 
-//                let observation2 = GKAccessPoint.shared.observe(
-//                         \.isPresentingGameCenter
-//                  ) { [weak self] _,_ in
-//
-//                      if(GKAccessPoint.shared.isPresentingGameCenter){
-////                          if let gameSceneObj = (self!.viewController as! ViewController){
-//                              if(gameSceneObj.gameRunning){
-//                                  gameSceneObj.setGamePaused(isPaused: true)
-//                              }
-//                          }
-//                      }else{
-//                          if let gameSceneObj = (self!.viewController as! ViewController){
-//                              if(gameSceneObj.gamePaused){
-//                                  gameSceneObj.setGamePaused(isPaused: false)
-//                              }
-//                          }
-//                      }
-//                }
-//                self.observerObj = observation2
             } else if let vc = gcAuthVC {
                     self.viewController?.present(vc, animated: true, completion: {
                       
@@ -69,6 +51,7 @@ class GameCenterHelper: NSObject, GKLocalPlayerListener {
             }
         }
     }
+
     var playerName = GKLocalPlayer.local.alias
     
     func showDashboard(){

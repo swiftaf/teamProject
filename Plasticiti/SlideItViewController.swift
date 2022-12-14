@@ -13,6 +13,8 @@ import GameKit
 
 class SlideItViewController: UIViewController {
     
+    var gameCenterHelper:GameCenterHelper!
+    
 
     enum Turn{
         case Nought
@@ -150,7 +152,18 @@ class SlideItViewController: UIViewController {
                     print(error?.localizedDescription ?? "")
                     return
                 }
-                print("done!")
+                print("achievement done!")
+            }
+            let score = GKScore(leaderboardIdentifier: "slideItsWon")
+            print("score prior:", score.value)
+            score.value = 10
+            GKScore.report([score]) { error
+                in
+                guard error == nil else {
+                    print(error?.localizedDescription ?? "")
+                    return
+                }
+                print("score done!")
             }
         }
         let ac = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
@@ -159,7 +172,7 @@ class SlideItViewController: UIViewController {
         }))
         self.present(ac, animated: true)
     }
-    
+
     func resetPanel() {
         for button in panel {
             button.setTitle(nil, for: .normal)

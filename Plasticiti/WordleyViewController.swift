@@ -8,15 +8,8 @@
 import UIKit
 import GameKit
 
-class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-    }
+class WordleyViewController: UIViewController{
     
-
-
-    
-   
     
     let answers = [
         "later", "bloke", "there", "ultra", "dealt", "canoe", "arose", "irate", "coals", "ranch", "yards", "stale", "plane", "horse", "stare", "badly", "blimp", "finch", "funny", "audio", "round", "tepid", "stare", "least", "audit", "learn", "ounce", "untie", "strap", "right", "brave", "avert", "there", "baker", "snarl", "maple", "inane", "valet", "medal", "unite", "rainy", "spell", "dream", "photo", "aloud", "inept", "piney", "waltz", "libel", "sneak", "carry", "flout", "foggy", "fault", "spiel", "denim", "spade", "catch", "floor", "equal", "ionic", "valid"
@@ -36,18 +29,13 @@ class WordleyViewController: UIViewController, GKGameCenterControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GKAccessPoint.shared.isActive = false
-//        btnBack.addTarget(self, action: #selector(tapOnButton), for: .touchUpInside)
-//        authenticateUser()
         answer = answers.randomElement() ?? "after"
         view.backgroundColor = #colorLiteral(red: 0.03728873655, green: 0.1320550442, blue: 0.2532687485, alpha: 1) //background
         addChildren()
-        
+        print("answer:", answer)
     }
     
-//    func buttonAction(sender: UIButton!) {
-//        print("button clicked")
-//        performSegue(withIdentifier: "wordleySegueID", sender: nil)
-//    }
+
     
     private func addChildren(){
         addChild(keyboardVC)
@@ -158,6 +146,8 @@ extension WordleyViewController: BoardViewControllerDatasource {
                     }
                     print("done!")
                 }
+                
+                
                 print("game won")
 
                 // reset button
