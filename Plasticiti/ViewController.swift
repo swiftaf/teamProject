@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         GKAccessPoint.shared.showHighlights = true
         
         // get username
-         username.text = "scoopnisker"
-        // username.text = GKLocalPlayer.local.alias
+        
+         username.text = GKLocalPlayer.local.alias
         
         // list available fonts
         for family in UIFont.familyNames.sorted(){

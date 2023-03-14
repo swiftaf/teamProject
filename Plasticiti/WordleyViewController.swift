@@ -12,8 +12,8 @@ class WordleyViewController: UIViewController{
     
     // answers array
     let answers = [
-        "aloud"
-//        "later", "bloke", "there", "ultra", "dealt", "canoe", "arose", "irate", "coals", "ranch", "yards", "stale", "plane", "horse", "stare", "badly", "blimp", "finch", "funny", "audio", "round", "tepid", "stare", "least", "audit", "learn", "ounce", "untie", "strap", "right", "brave", "avert", "there", "baker", "snarl", "maple", "inane", "valet", "medal", "unite", "rainy", "spell", "dream", "photo", "aloud", "inept", "piney", "waltz", "libel", "sneak", "carry", "flout", "foggy", "fault", "spiel", "denim", "spade", "catch", "floor", "equal", "ionic", "valid"
+
+        "later", "bloke", "there", "ultra", "dealt", "canoe", "arose", "irate", "coals", "ranch", "yards", "stale", "plane", "horse", "stare", "badly", "blimp", "finch", "funny", "audio", "round", "tepid", "stare", "least", "audit", "learn", "ounce", "untie", "strap", "right", "brave", "avert", "there", "baker", "snarl", "maple", "inane", "valet", "medal", "unite", "rainy", "spell", "dream", "photo", "aloud", "inept", "piney", "waltz", "libel", "sneak", "carry", "flout", "foggy", "fault", "spiel", "denim", "spade", "catch", "floor", "equal", "ionic", "valid"
     ]
     
     // initialize answer var
