@@ -42,22 +42,27 @@ private let collectionView: UICollectionView = {
      ])
      
  }
- public func reloadData(){
+
+// resets board
+public func reloadData(){
         collectionView.reloadData()
     }
-
 }
 
 extension BoardViewController{
+    
+     // number of sections
      func numberOfSections(in collectionView: UICollectionView) -> Int {
          return datasource?.currentGuesses.count ?? 0
      }
      
+     // number of items in section
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          let guesses = datasource?.currentGuesses ?? []
          return guesses[section].count
      }
      
+     // build the cells
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeyCell.identifer, for: indexPath) as? KeyCell else {
              fatalError()
@@ -75,6 +80,7 @@ extension BoardViewController{
          return cell
      }
      
+     // sizing
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
          
          let margin: CGFloat = 20
@@ -83,9 +89,8 @@ extension BoardViewController{
          return CGSize(width: size, height: size)
      }
      
+     // positioning
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-  
-         
          return UIEdgeInsets(
             top: 2,
             left: 2,
@@ -96,7 +101,7 @@ extension BoardViewController{
      }
      
      func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         //
+        return //
      }
  }
 

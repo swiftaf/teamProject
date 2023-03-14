@@ -4,6 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Roundels-0MoX.ttf</string>
+		<string>GuifxV2Transports-YMJo.ttf</string>
 		<string>Poppins-Bold.ttf</string>
 		<string>Poppins-BoldItalic.ttf</string>
 		<string>Poppins-Regular.ttf</string>

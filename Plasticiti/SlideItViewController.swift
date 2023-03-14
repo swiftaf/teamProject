@@ -8,9 +8,6 @@
 import UIKit
 import GameKit
 
-
-
-
 class SlideItViewController: UIViewController {
     
     var gameCenterHelper:GameCenterHelper!
@@ -40,10 +37,7 @@ class SlideItViewController: UIViewController {
     var NOUGHT = "O"
     var CROSS = "X"
     var panel = [UIButton]()
-    
-    
-    
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         GKAccessPoint.shared.isActive = false
@@ -72,7 +66,7 @@ class SlideItViewController: UIViewController {
         addBoard(sender)
         
         if checkForWin(CROSS){
-            result(title: "Cross wins!")
+            result(title: "X wins!")
         }
         
         if checkForWin(NOUGHT){

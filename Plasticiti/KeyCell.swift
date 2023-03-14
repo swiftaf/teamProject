@@ -6,8 +6,11 @@
 //
 
 import UIKit
+let fontPoppins = UIFont(name: "Poppins-Bold", size: 24)
 
 class KeyCell: UICollectionViewCell {
+    
+    
     static let identifer = "KeyCell"
     
     let label: UILabel = {
@@ -15,7 +18,7 @@ class KeyCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white //text color
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 18, weight: .medium)
+        label.font = fontPoppins
         return label
     }()
     
