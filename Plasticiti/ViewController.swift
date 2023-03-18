@@ -34,8 +34,8 @@ class ViewController: UIViewController {
 }
 
 // unload CG VC
-extension ViewController: GKGameCenterControllerDelegate {
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-    }
-}
+//extension ViewController: GKGameCenterControllerDelegate {
+//    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+//        gameCenterViewController.dismiss(animated: true, completion: nil)
+//    }
+//}
